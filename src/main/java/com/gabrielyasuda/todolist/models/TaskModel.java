@@ -3,13 +3,14 @@ package com.gabrielyasuda.todolist.models;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Entity
 @Table(name = "TB_TASK")
 public class TaskModel {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private UUID id;
 
     @Column(nullable = false)
     private String taskName;
@@ -17,15 +18,18 @@ public class TaskModel {
     @Column
     private String taskDescription;
 
+    @Column
+    private boolean taskComplete;
+
     @Column(nullable = false)
     private LocalDate taskDate;
 
     //Getters & Setters BEGINNING
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
@@ -35,6 +39,14 @@ public class TaskModel {
 
     public void setTaskName(String taskName) {
         this.taskName = taskName;
+    }
+
+    public boolean isTaskComplete() {
+        return taskComplete;
+    }
+
+    public void setTaskComplete(boolean taskComplete) {
+        this.taskComplete = taskComplete;
     }
 
     public String getTaskDescription() {
