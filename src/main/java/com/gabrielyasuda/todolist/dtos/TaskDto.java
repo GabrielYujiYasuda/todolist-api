@@ -8,7 +8,6 @@ public class TaskDto {
     private String taskName;
     private String taskDescription;
 
-    @NotBlank
     private boolean taskComplete;
 
     //Getters & Setters BEGINNING
