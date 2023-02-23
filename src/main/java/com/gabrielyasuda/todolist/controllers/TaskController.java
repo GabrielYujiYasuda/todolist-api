@@ -7,7 +7,6 @@ import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.scheduling.config.Task;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -20,12 +19,6 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/task")
 public class TaskController {
-
-    //SAVE - done
-    //DELETE - done
-    //GET ALL - done
-    //GET ONE
-    //UPDATE
 
     final TaskService taskService;
 
@@ -58,7 +51,7 @@ public class TaskController {
 
         taskService.delete(taskModelOptional.get());
 
-        return ResponseEntity.status(HttpStatus.OK).body("Task deleted successfuly!");
+        return ResponseEntity.status(HttpStatus.OK).body("Task deleted successfully!");
     }
 
     //Getting all tasks

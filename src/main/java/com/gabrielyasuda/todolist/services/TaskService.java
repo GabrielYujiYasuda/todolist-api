@@ -3,7 +3,6 @@ package com.gabrielyasuda.todolist.services;
 import com.gabrielyasuda.todolist.models.TaskModel;
 import com.gabrielyasuda.todolist.repositories.TaskRepository;
 import jakarta.transaction.Transactional;
-import org.springframework.scheduling.config.Task;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
